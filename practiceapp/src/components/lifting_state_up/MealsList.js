@@ -3,6 +3,7 @@ import React from 'react';
 import MealItem from './MealItem';
 
 function MealsList({ meals, addMeal }) {
+  console.log("function addMeal into App component", meals);
   return (
     <div>
       <h2>Meals:</h2>
