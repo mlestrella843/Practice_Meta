@@ -56,7 +56,7 @@
 //* useReducer Hook
 
 import React from 'react';
-import Counter from './components/Counter';
+import Counter from './components/useReducer/Counter';
 
 function App() {
   return (
