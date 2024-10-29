@@ -70,12 +70,12 @@
 // export default App;
 
 //* Lab 
-import React from "react";
+import React, {useState} from "react";
 import Fruits from "./components/Lab/Fruits";
 import FruitsCounter from "./components/Lab/FruitsCounter";
 
 function App() {
-  const [fruits] = React.useState([
+  const [fruits, setFruits] = useState([
     { fruitName: 'apple', id: 1 },
     { fruitName: 'apple', id: 2 },
     { fruitName: 'plum', id: 3 },
