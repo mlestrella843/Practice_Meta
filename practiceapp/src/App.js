@@ -55,14 +55,36 @@
 
 //* useReducer Hook
 
-import React from 'react';
-import Counter from './components/useReducer/Counter';
+// import React from 'react';
+// import Counter from './components/useReducer/Counter';
+
+// function App() {
+//   return (
+//     <div>
+//       <h1>My Counter App</h1>
+//       <Counter />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+//* Lab 
+import React from "react";
+import Fruits from "./components/Lab/Fruits";
+import FruitsCounter from "./components/Lab/FruitsCounter";
 
 function App() {
+  const [fruits] = React.useState([
+    { fruitName: 'apple', id: 1 },
+    { fruitName: 'apple', id: 2 },
+    { fruitName: 'plum', id: 3 },
+]);
   return (
-    <div>
-      <h1>My Counter App</h1>
-      <Counter />
+    <div className="App">
+      <h1>Where should the state go?</h1>
+      <Fruits fruits={fruits}/>
+      <FruitsCounter fruits={fruits}/>
     </div>
   );
 }
