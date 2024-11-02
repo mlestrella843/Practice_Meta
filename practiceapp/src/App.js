@@ -70,23 +70,52 @@
 // export default App;
 
 //* Lab 
-import React, {useState} from "react";
-import Fruits from "./components/Lab/Fruits";
-import FruitsCounter from "./components/Lab/FruitsCounter";
+// import React, {useState} from "react";
+// import Fruits from "./components/Lab/Fruits";
+// import FruitsCounter from "./components/Lab/FruitsCounter";
+
+// function App() {
+//   const [fruits, setFruits] = useState([
+//     { fruitName: 'apple', id: 1 },
+//     { fruitName: 'apple', id: 2 },
+//     { fruitName: 'plum', id: 3 },
+// ]);
+//   return (
+//     <div className="App">
+//       <h1>Where should the state go?</h1>
+//       <Fruits fruits={fruits}/>
+//       <FruitsCounter fruits={fruits}/>
+//     </div>
+//   );
+// }
+// export default App;
+
+//* react-router-dom
+import React from 'react';
+import { BrowserRouter as Router, Route, Link, Routes } from'react-router-dom';
+
+import HomePage from './components/react-router/Homepage';
+import AboutMe from './components/react-router/AboutMe';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
+
 
 function App() {
-  const [fruits, setFruits] = useState([
-    { fruitName: 'apple', id: 1 },
-    { fruitName: 'apple', id: 2 },
-    { fruitName: 'plum', id: 3 },
-]);
-  return (
-    <div className="App">
-      <h1>Where should the state go?</h1>
-      <Fruits fruits={fruits}/>
-      <FruitsCounter fruits={fruits}/>
-    </div>
-  );
-}
-
-export default App;
+    return (
+      <div>
+        <Navbar bg="primary" variant="dark" expand="lg">
+            <Link to='/' className='nav-item'>HomePage</Link>
+            <Link to='/about-me' className='nav-item'>About Me</Link>
+          </Navbar>
+          <Container>
+            <Routes className="App">
+              <Route path="/" element={<HomePage />} />
+              <Route path="/about-me" element={<AboutMe />} />
+            </Routes>
+          </Container>
+      
+      </div>
+    );
+  }
+  export default App;
