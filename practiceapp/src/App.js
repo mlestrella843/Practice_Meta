@@ -91,11 +91,42 @@
 // export default App;
 
 //* react-router-dom
+// import React from 'react';
+// import { BrowserRouter as Router, Route, Link, Routes } from'react-router-dom';
+
+// import HomePage from './components/react-router/Homepage';
+// import AboutMe from './components/react-router/AboutMe';
+
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
+
+
+// function App() {
+//     return (
+//       <div>
+//         <Navbar bg="primary" variant="dark" expand="lg">
+//             <Link to='/' className='nav-item'>HomePage</Link>
+//             <Link to='/about-me' className='nav-item'>About Me</Link>
+//           </Navbar>
+//           <Container>
+//             <Routes className="App">
+//               <Route path="/" element={<HomePage />} />
+//               <Route path="/about-me" element={<AboutMe />} />
+//             </Routes>
+//           </Container>
+      
+//       </div>
+//     );
+//   }
+//   export default App;
+
+  //* Ternary Operators + react-router-dom
 import React from 'react';
 import { BrowserRouter as Router, Route, Link, Routes } from'react-router-dom';
 
 import HomePage from './components/react-router/Homepage';
 import AboutMe from './components/react-router/AboutMe';
+import CurrentImage from './components/Conditional-rendering/CurrentImage';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
@@ -107,11 +138,13 @@ function App() {
         <Navbar bg="primary" variant="dark" expand="lg">
             <Link to='/' className='nav-item'>HomePage</Link>
             <Link to='/about-me' className='nav-item'>About Me</Link>
+            <Link to='/get-time' className='nav-item'>Get Time</Link>
           </Navbar>
           <Container>
             <Routes className="App">
               <Route path="/" element={<HomePage />} />
               <Route path="/about-me" element={<AboutMe />} />
+              <Route path="/get-time" element={<CurrentImage />} />
             </Routes>
           </Container>
       
