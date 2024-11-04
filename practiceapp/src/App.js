@@ -139,12 +139,31 @@
 
   //* Embedding videos
 
-  import React from "react";
-  import MyVideo from "./components/embeddedVideos/MyVideo";
+  // import React from "react";
+  // import MyVideo from "./components/embeddedVideos/MyVideo";
+  // function App() {
+  //   return (
+  //     <div>
+  //       <MyVideo />
+  //     </div>
+  //   );
+  // }
+  // export default App;
+
+  //* Embedding Audio React-Player
+
+  import ReactPlayer from "react-player/youtube";
+ 
   function App() {
+    const vidUrl = 'https://www.youtube.com/watch?v=YuIc4mq7zMU';
     return (
       <div>
-        <MyVideo />
+        <h3>Audio Player in React</h3>
+        <ReactPlayer 
+        url={vidUrl}
+        playing={false}
+        volume={0.5}
+        />
       </div>
     );
   }
