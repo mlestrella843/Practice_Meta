@@ -120,18 +120,31 @@
 //   }
 //   export default App;
 
-  //* Ternary Operators + react-router-dom
-import React from 'react';
+  //* Embedding images
+// import React from 'react';
 
-function App() {
+// function App() {
+//     return (
+//       <div>
+//         <img 
+//           height={100}
+//           src={require ("./logo512.png")}
+//           alt="logo"
+//         />
+      
+//       </div>
+//     );
+//   }
+//   export default App;
+
+  //* Embedding videos
+
+  import React from "react";
+  import MyVideo from "./components/embeddedVideos/MyVideo";
+  function App() {
     return (
       <div>
-        <img 
-          height={100}
-          src={require ("./logo512.png")}
-          alt="logo"
-        />
-      
+        <MyVideo />
       </div>
     );
   }
